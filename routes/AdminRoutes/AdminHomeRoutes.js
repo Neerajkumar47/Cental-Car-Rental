@@ -7,7 +7,7 @@ const{home,login,loginStore, logout,profileUpdate, profileUpdateStore}=require("
 AdminHomeRouter.get("/",home)
 AdminHomeRouter.get("/login",login)
 AdminHomeRouter.post("/login",encoder,loginStore)
-AdminHomeRouter.post("/logout",logout)
+AdminHomeRouter.get("/logout",logout)
 AdminHomeRouter.get("/update-profile",isLogin,profileUpdate)
 AdminHomeRouter.post("/update-profile",isLogin,encoder,usersUploader.single("pic"),profileUpdateStore)
 

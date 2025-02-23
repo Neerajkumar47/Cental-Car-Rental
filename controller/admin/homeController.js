@@ -57,15 +57,18 @@ async function loginStore(req, res) {
   }
 }
 
-function logout(req,res){
-  req.session.destroy((error)=>{
-    if(error)
-      console.log(error);
-      else
-      res.redirect("/admin/login")
-  })
-  
+function logout(req, res) {
+  // console.log(req)
+  // console.log(res)
+  req.session.destroy((error) => {
+    if (error) {
+      console.error("Error destroying session:", error);
+      return;
+    }
+    res.redirect("/admin/login");
+  });
 }
+
 
 
 async function profileUpdate(req, res) {

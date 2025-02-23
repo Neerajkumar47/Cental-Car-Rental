@@ -7,7 +7,7 @@ mongoose.connect("mongodb+srv://nk5347624:admin@cluster0.imovo.mongodb.net/car-r
 })
 .catch((error)=>{
     console.log(error);
-    
+    a
 })
 
 // async function getConnect(){
